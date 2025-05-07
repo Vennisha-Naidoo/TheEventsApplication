@@ -6,7 +6,7 @@ const DUMMY_EVENTS = [
         title: 'Image Gallery Showing'
     },
     {
-        id: 'event',
+        id: 'event2',
         title: 'Art Gallery Showing'
     }
 ];
