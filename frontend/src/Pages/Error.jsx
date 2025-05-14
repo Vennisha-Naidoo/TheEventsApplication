@@ -1,7 +1,10 @@
+import PageContent from "../components/PageContent";
+
 function ErrorPage() {
-    return <h1>
-        An Error Has Occurred!
-    </h1>
+    return <PageContent title="An error has occurred!">
+        <p>Something went wrong.</p>
+    </PageContent>
+
 }
 
 export default ErrorPage;
