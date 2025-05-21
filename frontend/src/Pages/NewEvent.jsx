@@ -1,4 +1,4 @@
-import { json } from "react-router-dom";
+import { json, redirect } from "react-router-dom";
 import EventForm from "../components/EventForm";
 
 function NewEvent() {
@@ -18,8 +18,6 @@ export async function action({ request, params }) {
         description: data.get('description')
     };
 
-    console.log(eventData)
-
     const response = await fetch('http://localhost:8080/events', {
         method: 'POST',
         headers: {
@@ -30,7 +28,7 @@ export async function action({ request, params }) {
 
     if (!response.ok){
         throw json({ message: 'Could not save event.' }, { status: 500 });
-    } else {
-        alert("Done.");
     }
+
+    return redirect('/events');
 }
