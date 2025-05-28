@@ -1,6 +1,10 @@
+import PageContent from '../components/PageContent';
+
 function Home() {
     return <>
-    <h1>Home Page</h1>
+    <PageContent title="Home">
+        <p>Welcome! You can scroll through our events.</p>
+    </PageContent>
     </>
 }
 
